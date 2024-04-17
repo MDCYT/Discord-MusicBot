@@ -25,13 +25,31 @@ module.exports = {
 	// Lavalink server; public lavalink -> https://lavalink-list.darrennathanael.com/; create one yourself -> https://darrennathanael.com/post/how-to-lavalink
 	nodes: [
 		{
-			identifier: "Main Node", //- Used for indentifier in stats commands.
-			host: "lavalink.devamop.in", //- The host name or IP of the lavalink server.
-			port: 443, // The port that lavalink is listening to. This must be a number!
-			password: "DevamOP", //- The password of the lavalink server.
+			identifier: "Hosted by @ Caliwyr", //- Used for indentifier in stats commands.
+			host: "lavalink.oryzen.xyz", //- The host name or IP of the lavalink server.
+			port: 80, // The port that lavalink is listening to. This must be a number!
+			password: "oryzen.xyz", //- The password of the lavalink server.
 			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
 			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
-			secure: true, //- Can be either true or false. Only use true if ssl is enabled!
+			secure: false, //- Can be either true or false. Only use true if ssl is enabled!
+		},
+		{
+			identifier: "Hosted by @ Reedroux", //- Used for indentifier in stats commands.
+			host: "212.192.29.91", //- The host name or IP of the lavalink server.
+			port: 25529, // The port that lavalink is listening to. This must be a number!
+			password: "reedrouxv4lavalink", //- The password of the lavalink server.
+			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
+			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
+			secure: false, //- Can be either true or false. Only use true if ssl is enabled!
+		},
+		{
+			identifier: "Hosted by @ Jirayu", //- Used for indentifier in stats commands.
+			host: "jirayu-lavalink.rlss.in.th", //- The host name or IP of the lavalink server.
+			port: 2353, // The port that lavalink is listening to. This must be a number!
+			password: "FuqW7CB2f8Kcwp36xADV5N", //- The password of the lavalink server.
+			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
+			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
+			secure: false, //- Can be either true or false. Only use true if ssl is enabled!
 		},
 	],
 	embedColor: "#2f3136", //- Color of the embeds, hex supported
