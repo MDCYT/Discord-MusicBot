@@ -5,8 +5,8 @@ const {
 	MessageButton,
 	MessageEmbed
 } = require("discord.js");
-const Genius = require("genius-lyrics");
-const lyricsApi = new Genius.Client(); 
+const { Rlyrics } = require("rlyrics");
+const lyricsApi = new Rlyrics();
 
 const command = new SlashCommand()
 	.setName("lyrics")
@@ -67,7 +67,7 @@ const command = new SlashCommand()
 		let query = args ? args : currentTitle;
 		let lyricsResults = [];
 
-		lyricsApi.songs.search(query).then(async (lyricsData) => {
+		lyricsApi.search(query).then(async (lyricsData) => {
 			if (lyricsData.length !== 0) {
 				for (let i = 0; i < client.config.lyricsMaxResults; i++) {
 					if (lyricsData[i]) {
@@ -108,8 +108,8 @@ const command = new SlashCommand()
 						await interaction.deferUpdate();
 						const url = lyricsData[parseInt(interaction.values[0])].url;
 
-						lyricsApi.songs.scrape(url).then((lyrics) => {
-							let lyricsText = lyrics.lyrics();
+						lyricsApi.find(url).then((lyrics) => {
+							let lyricsText = lyrics.lyrics;
 
 							const button = new MessageActionRow()
 								.addComponents(
@@ -124,13 +124,14 @@ const command = new SlashCommand()
 										.setStyle('LINK'),
 								);
 
-							const musixmatch_icon = 'https://i.pinimg.com/originals/48/a0/9f/48a09fb46e00022a692e459b917a2848.jpg';
+							const musixmatch_icon = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Musixmatch_logo_icon_only.svg/480px-Musixmatch_logo_icon_only.svg.png';
 							let lyricsEmbed = new MessageEmbed()
 								.setColor(client.config.embedColor)
-								.setTitle(`${lyrics.data.songPage.title}`)
+								.setTitle(`${lyrics.name}`)
 								.setURL(url)
+								.setThumbnail(lyrics.icon)
 								.setFooter({
-									text: 'Lyrics provided by Genius Lyrics.',
+									text: 'Lyrics provided by MusixMatch.',
 									iconURL: musixmatch_icon
 								})
 								.setDescription(lyricsText);
