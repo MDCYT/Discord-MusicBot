@@ -25,15 +25,6 @@ module.exports = {
 	// Lavalink server; public lavalink -> https://lavalink-list.darrennathanael.com/; create one yourself -> https://darrennathanael.com/post/how-to-lavalink
 	nodes: [
 		{
-			identifier: "1", //- Used for indentifier in stats commands.
-			host: "lavalink.oryzen.xyz", //- The host name or IP of the lavalink server.
-			port: 80, // The port that lavalink is listening to. This must be a number!
-			password: "DevamOP", //- The password of the lavalink server.
-			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
-			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
-			secure: false, //- Can be either true or false. Only use true if ssl is enabled!
-		},
-		{
 			identifier: "2", //- Used for indentifier in stats commands.
 			host: "212.192.29.91", //- The host name or IP of the lavalink server.
 			port: 25529, // The port that lavalink is listening to. This must be a number!
