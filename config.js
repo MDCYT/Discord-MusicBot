@@ -67,7 +67,6 @@ module.exports = {
 			password: "auto.creavite.co", //- The password of the lavalink server.
 			retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
 			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
-<<<<<<< HEAD
 		},
 		{
 			identifier: "Creavite US1 Lavalink",
@@ -86,9 +85,6 @@ module.exports = {
 			secure: false,
 		 	retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
 			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
-		}
-=======
-			secure: false, //- Can be either true or false. Only use true if ssl is enabled!
 		},
 		{
 			identifier: "6", //- Used for indentifier in stats commands.
@@ -333,7 +329,6 @@ module.exports = {
 			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
 			secure: true, //- Can be either true or false. Only use true if ssl is enabled!
 		},
->>>>>>> parent of e107dcf (Update config.js)
 	],
 	embedColor: "#2f3136", //- Color of the embeds, hex supported
 	presence: {
