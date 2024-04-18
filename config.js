@@ -68,6 +68,24 @@ module.exports = {
 			secure: false,
 		 	retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
 			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
+		},
+		{
+			identifier: "Creavite US1 Lavalink",
+			password: "auto.creavite.co",
+			host: "us1.lavalink.creavite.co",
+			port: 20080,
+			secure: false,
+		 	retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
+			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
+		},
+		{
+			identifier: "GlassHost - NY1",
+			password: "glasshost1984",
+			host: "n1.ll.darrennathanael.com",
+			port: 2269,
+			secure: false,
+		 	retryAmount: 200, //- The amount of times to retry connecting to the node if connection got dropped.
+			retryDelay: 40, //- Delay between reconnect attempts if connection is lost.
 		}
 	],
 	embedColor: "#2f3136", //- Color of the embeds, hex supported
