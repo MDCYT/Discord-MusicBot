@@ -8,6 +8,7 @@ const command = new SlashCommand()
 	.setName("stats")
 	.setDescription("Get information about the bot")
 	.setRun(async (client, interaction) => {
+		console.log(client.manager.nodes.values().next().value)
 		// get OS info
 		const osver = os.platform() + " " + os.release();
 		
